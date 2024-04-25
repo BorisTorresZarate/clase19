@@ -19,7 +19,9 @@ app.use((req, res, next) => {
     next()
   }
 })
-
+app.get('/', (req, res) => {
+  res.json('hola mundo')
+})
 app.get('/api/usuarios', getUsuarios)
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`))
